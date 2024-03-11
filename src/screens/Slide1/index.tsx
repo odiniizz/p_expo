@@ -1,7 +1,8 @@
 import { Text, Image, View, ImageBackground } from "react-native"
-import {styles} from './styles'
-import {stylesg} from '../../styles/globalstyles'
-import { ButtonSlide } from "../../components/ButtonSlide";
+import { styles } from './styles'
+import { globalstyles } from '../../styles/globalstyles'
+import { ButtonSlide } from "../../components/ButtonSlide"
+import { Unitario } from "../../components/ButtonSlide"
 import { IPagina } from "../../../App";
 
 export function Slide1({ setPageI }: IPagina){
@@ -10,25 +11,25 @@ export function Slide1({ setPageI }: IPagina){
     return (
         <ImageBackground style={styles.container} source ={slide}>
             
-            <View style={stylesg.quadro}>
-                <Text style={stylesg.texto}>Bateu aquela vontade de comer um docinho, né?</Text>
+            <View style={globalstyles.quadro}>
+                <Text style={globalstyles.texto}>Bateu aquela vontade de comer um docinho, né?</Text>
             </View>
 
-            <View style={stylesg.icone}>
+            <View style={globalstyles.icone}>
                 <Image source={fome}></Image>
             </View>
 
-            <View style={stylesg.button}>
-                <View style={stylesg.buttonSpace}>
-                    <ButtonSlide style ={styles.sozinho} onPressI={() => setPageI(1)} />
+            <View style={globalstyles.button}>
+                <View style={globalstyles.buttonSpace}>
+                    <Unitario onPressI={() => setPageI(1)} />
                 </View> 
-                <View style={stylesg.buttonSpace}>
+                <View style={globalstyles.buttonSpace}>
                     <ButtonSlide onPressI={() => setPageI(2)} />
                 </View> 
-                <View style={stylesg.buttonSpace}>
+                <View style={globalstyles.buttonSpace}>
                     <ButtonSlide onPressI={() => setPageI(3)} />
                 </View> 
-                <View style={stylesg.buttonSpace}>
+                <View style={globalstyles.buttonSpace}>
                     <ButtonSlide onPressI={() => setPageI(4)} />
                 </View> 
             </View>

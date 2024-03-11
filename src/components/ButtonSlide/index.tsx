@@ -10,3 +10,9 @@ export function ButtonSlide({ onPressI }: IButton) {
         <TouchableOpacity style={styles.ball} onPress={onPressI} />
     )
 }
+
+export function Unitario({ onPressI }: IButton) {
+    return (
+        <TouchableOpacity style={styles.unitario} onPress={onPressI} />
+    )
+}

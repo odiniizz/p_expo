@@ -1,6 +1,7 @@
 import { ImageBackground, View, Text, Image } from "react-native"
-import {styles} from './styles'
-import {stylesg} from '../../styles/globalstyles'
+import { styles } from './styles'
+import { globalstyles } from '../../styles/globalstyles'
+import { Unitario } from "../../components/ButtonSlide"
 import { IPagina } from "../../../App";
 import { ButtonSlide } from "../../components/ButtonSlide";
 
@@ -9,24 +10,24 @@ export function Slide4({ setPageI }: IPagina){
     const cozinhando = require('../../assets/cozinhando.png')
     return (
         <ImageBackground style={styles.container} source ={slide}>
-            <View style={stylesg.quadro}>
-            <Text style={stylesg.texto}>Coloque a mão na massa conosco e se divirta neste processo!</Text>
+            <View style={globalstyles.quadro}>
+            <Text style={globalstyles.texto}>Coloque a mão na massa conosco e se divirta neste processo!</Text>
             </View>
-            <View style={stylesg.icone}>
+            <View style={globalstyles.icone}>
                 <Image source={cozinhando}></Image>
             </View>
-            <View style={stylesg.button}>
-                <View style={stylesg.buttonSpace}>
+            <View style={globalstyles.button}>
+                <View style={globalstyles.buttonSpace}>
                     <ButtonSlide onPressI={() => setPageI(1)} />
                 </View> 
-                <View style={stylesg.buttonSpace}>
+                <View style={globalstyles.buttonSpace}>
                     <ButtonSlide onPressI={() => setPageI(2)} />
                 </View> 
-                <View style={stylesg.buttonSpace}>
+                <View style={globalstyles.buttonSpace}>
                     <ButtonSlide onPressI={() => setPageI(3)} />
                 </View> 
-                <View style={stylesg.buttonSpace}>
-                    <ButtonSlide onPressI={() => setPageI(4)} />
+                <View style={globalstyles.buttonSpace}>
+                    <Unitario onPressI={() => setPageI(4)} />
                 </View> 
             </View>
         </ImageBackground>
